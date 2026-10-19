@@ -69,4 +69,72 @@
   .btn::after { display: none; }
 }
 
+
+/* Shared metallic gold palette throughout the site */
+:root {
+  --gold-gradient: linear-gradient(90deg,
+    #edcd62 0%, #faf5a0 10%, #dfa735 27%,
+    #e0ac3c 43%, #faf5a0 62%, #faf5a0 73%,
+    #e6c260 89%, #b98b3e 100%);
+}
+.logo { background-image: var(--gold-gradient); }
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  h1 span, h2 em, .kicker, .label, .about-sign,
+  .service > span, .service-mark, .year, .group-num,
+  .plus, .when, .hero-foot a,
+  .nav-links a.active:not(:last-child),
+  .nav-links a:hover:not(:last-child) {
+    background-image: var(--gold-gradient);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .label b {
+    color: inherit;
+    -webkit-text-fill-color: inherit;
+  }
+}
+.kicker::before {
+  background: var(--gold-gradient);
+  -webkit-text-fill-color: initial;
+}
+.btn, .contact-links a, .nav-links a:last-child {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    var(--gold-gradient) border-box;
+}
+.nav-links a:last-child { color: var(--gold); }
+.btn.primary, .btn:hover, .btn:focus-visible {
+  background:
+    var(--gold-gradient) padding-box,
+    var(--gold-gradient) border-box;
+  color: #111;
+  -webkit-text-fill-color: #111;
+}
+.education {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#100e0a, var(--bg)) padding-box,
+    var(--gold-gradient) border-box;
+}
+.exp-dot {
+  border: 0;
+  background: var(--gold-gradient);
+}
+@media (forced-colors: active) {
+  h1 span, h2 em, .kicker, .label, .about-sign, .logo,
+  .service > span, .service-mark, .year, .group-num, .plus,
+  .when, .hero-foot a, .nav-links a {
+    background: none;
+    color: LinkText;
+    -webkit-text-fill-color: currentColor;
+  }
+  .btn, .education, .nav-links a:last-child {
+    border: 1px solid ButtonText;
+  }
+}
+
 </style></head><body><nav aria-label="Navigation principale"><a href="#accueil" class="logo" aria-label="Accueil — Daraoui Mohammed">D<span>.</span>M</a><button class="menu" aria-expanded="false" aria-controls="navigation">Menu ☰</button><div class="nav-links" id="navigation"><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#competences">Compétences & services</a><a href="#formations">Formations</a><a href="#experiences">Expériences</a><a href="#contact">Contact ↗</a></div></nav><header class="hero" id="accueil"><div class="portrait"><img src="assets/portrait.webp" alt="Portrait de Daraoui Mohammed en costume noir" fetchpriority="high" width="1098" height="1433"></div><div class="hero-copy"><div class="kicker rise">Marketing · Création · Pédagogie</div><h1 class="rise">DARAOUI<br><span>MOHAMMED</span></h1><div class="disciplines rise">Marketing · Communication · Création de contenu · Animateur et encadrant pédagogique</div><p class="hero-quote rise">Des idées créatives, une communication engagée et une pédagogie qui inspire.</p><div class="actions rise"><a class="btn primary" href="#experiences">Découvrir mon parcours <span aria-hidden="true">↗</span></a><a class="btn" href="#contact">Me contacter <span aria-hidden="true">↗</span></a></div></div><div class="hero-foot"><span>Casablanca, Maroc</span><a href="#apropos">Défiler pour découvrir ↓</a></div></header><main><section class="section" id="apropos"><div class="section-head"><div class="label"><b>01</b> À propos</div><h2>Créativité.<br>Engagement. <em>Transmission.</em></h2></div><div class="about-content"><p>Je suis Daraoui Mohammed, diplômé en commerce et marketing de l’ISTA Polo de Casablanca, passionné par la communication, la création de contenu et l’animation pédagogique.</p><p>Responsable du département marketing de l’Association Jeunesse de la Citoyenneté Marocaine (AJCM) – branche Hay Adil, je contribue à valoriser les initiatives associatives et à créer des contenus adaptés à leurs publics.</p><p>Également animateur et encadrant pédagogique, je conçois et anime des activités qui favorisent la créativité, l’autonomie et l’esprit d’équipe chez les enfants et les jeunes.</p><div class="about-sign">Daraoui Mohammed</div></div></section><section class="section" id="competences"><div class="section-head"><div class="label"><b>02</b> Compétences & services</div><h2>Mes domaines<br>d’<em>expertise.</em></h2></div><div class="service-grid"><article class="service"><span>01</span><h3>Communication digitale</h3><p>Création de contenus et gestion de la présence sur les réseaux sociaux pour les marques et les associations.</p><div class="service-mark" aria-hidden="true">↗</div></article><article class="service"><span>02</span><h3>Design graphique</h3><p>Conception de visuels pour les réseaux sociaux, d’affiches et de supports de communication adaptés à l’identité de chaque projet.</p><div class="service-mark" aria-hidden="true">↗</div></article><article class="service"><span>03</span><h3>Photographie</h3><p>Réalisation de portraits et de photographies pour mettre en valeur les personnes, les événements et les projets.</p><div class="service-mark" aria-hidden="true">↗</div></article><article class="service"><span>04</span><h3>Animation & encadrement pédagogique</h3><p>Conception et animation d’activités éducatives, culturelles et ludiques adaptées aux enfants et aux jeunes.</p><div class="service-mark" aria-hidden="true">↗</div></article></div></section><section class="section" id="formations"><div class="section-head"><div class="label"><b>03</b> Formations</div><h2>Apprendre.<br><em>Évoluer.</em></h2></div><div class="education"><div><h3>Diplôme en gestion des entreprises — Commerce & Marketing</h3><p>ISTA Polo, Casablanca</p></div><span class="year">Obtenu en 2027</span></div><div class="education"><div><h3>Baccalauréat</h3><p>Lycée Jaâfar El Fassi, Casablanca</p></div><span class="year">2024</span></div><details><summary><span class="group-num">01</span>Entrepreneuriat &amp; e-commerce<span class="plus">+</span></summary><div class="certs"><div class="cert"><h4>Formation en entrepreneuriat</h4><p>OFPPT</p></div><div class="cert"><h4>Formation en e-commerce</h4><p>OFPPT</p></div><div class="cert"><h4>Managing a Business Venture</h4><p>Cisco Networking Academy</p></div><div class="cert"><h4>Launching a Business Venture</h4><p>Cisco Networking Academy</p></div><div class="cert"><h4>Discovering Entrepreneurship</h4><p>Cisco Networking Academy</p></div><div class="cert"><h4>Engaging Stakeholders for Success</h4><p>Cisco Networking Academy</p></div></div></details><details><summary><span class="group-num">02</span>Marketing digital &amp; création<span class="plus">+</span></summary><div class="certs"><div class="cert"><h4>Google Ads — Publicité sur le Réseau Display</h4><p>Google</p></div><div class="cert"><h4>Google Analytics</h4><p>Google</p></div><div class="cert"><h4>Digital Agencies &amp; Freelancers — Double certification</h4><p>ALX &amp; MNTR</p></div><div class="cert"><h4>Marketing digital — Cours complet</h4><p>Cursa</p></div><div class="cert"><h4>Création de contenu avec l’intelligence artificielle</h4><p>Initiative Urbaine · Cooperació Valenciana · Generalitat Valenciana · Syndicalistes sans Frontières</p></div></div></details><details><summary><span class="group-num">03</span>Technologie &amp; compétences numériques<span class="plus">+</span></summary><div class="certs"><div class="cert"><h4>Introduction to Modern AI</h4><p>Cisco Networking Academy</p></div><div class="cert"><h4>Introduction to Data Science</h4><p>Cisco Networking Academy</p></div><div class="cert"><h4>Computer Hardware Basics</h4><p>Cisco Networking Academy</p></div><div class="cert"><h4>Create Digital Content, Communicate, and Collaborate Online</h4><p>OpenEDG · Cisco Networking Academy</p></div><div class="cert"><h4>Digital Awareness</h4><p>OpenEDG · Cisco Networking Academy</p></div><div class="cert"><h4>Linux Unhatched</h4><p>Network Development Group · Cisco Networking Academy</p></div><div class="cert"><h4>Python Essentials 1</h4><p>Python Institute · Cisco Networking Academy</p></div><div class="cert"><h4>STEM for Sustainability</h4><p>Boeing · Amideast · INDH</p></div></div></details><details><summary><span class="group-num">04</span>Pédagogie, animation &amp; vie associative<span class="plus">+</span></summary><div class="certs"><div class="cert"><h4>Les indispensables de l’enseignement</h4><p>Canva Design School</p></div><div class="cert"><h4>Formation générale des cadres de colonies de vacances — 1er et 2e degrés, enfants de 7 à 18 ans</h4><p>Ministère de la Jeunesse, de la Culture et de la Communication · AJCM</p></div><div class="cert"><h4>Renforcement des capacités en gestion associative</h4><p>Ministère de la Jeunesse, de la Culture et de la Communication · AJCM</p></div><div class="cert"><h4>Programme « Al-Assas » — Animation et gestion associative</h4><p>Ministère de la Jeunesse, de la Culture et de la Communication · AJCM</p></div></div></details></section><section class="section" id="experiences"><div class="section-head"><div class="label"><b>04</b> Expériences</div><h2>Un parcours<br>en <em>action.</em></h2></div><article class="experience"><span class="when">Depuis 2025</span><div><h3>Responsable du département marketing</h3><p>Association Jeunesse de la Citoyenneté Marocaine — branche Hay Adil</p></div><span class="exp-dot" aria-hidden="true"></span></article><article class="experience"><span class="when">Depuis 2024</span><div><h3>Animateur et encadrant pédagogique</h3><p>Association Jeunesse de la Citoyenneté Marocaine — branche Hay Adil</p></div><span class="exp-dot" aria-hidden="true"></span></article><article class="experience"><span class="when">2024–2025</span><div><h3>Animateur éducatif</h3><p>Centre des Langues et de Communication — Hay Adil</p></div><span class="exp-dot" aria-hidden="true"></span></article><article class="experience"><span class="when">Novembre 2025</span><div><h3>Stage en photographie et design graphique</h3><p>AMBF Business — Agence de marketing digital, Casablanca</p><p class="description">Participation à des shootings photo et création de visuels pour les réseaux sociaux.</p></div><span class="exp-dot" aria-hidden="true"></span></article><article class="experience"><span class="when">2026</span><div><h3>Stage en gestion des produits</h3><p>Taha Ikhwan — Entreprise de peinture</p><p class="description">Participation à la gestion des produits de l’entreprise.</p></div><span class="exp-dot" aria-hidden="true"></span></article></section><section class="contact" id="contact"><span class="label">05 / Contact</span><h2>Et si on <em>échangeait ?</em></h2><p>Un projet, une collaboration ou une opportunité professionnelle ? Échangeons.</p><div class="contact-links"><a class="btn" href="https://www.instagram.com/daraoui.mohammed/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>Instagram <span aria-hidden="true">↗</span></a><a class="btn" href="mailto:daraouima@gmail.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 5 9 8 9-8"/></svg>daraouima@gmail.com</a><a class="btn" href="tel:+212609870724"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 3 4 5-3 3c2 3 3 4 6 6l3-3 5 4c-1 6-8 4-13-1S1 4 6 3Z"/></svg>0609870724</a></div></section></main><footer><span>© 2026 Daraoui Mohammed. Tous droits réservés.</span><a href="#accueil">Retour en haut ↑</a></footer><script>const menu=document.querySelector('.menu'),links=document.querySelector('.nav-links');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open)});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){links.classList.remove('open');menu.setAttribute('aria-expanded','false')}});const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id))}}),{rootMargin:'-15% 0px -65% 0px'});document.querySelectorAll('header[id],section[id]').forEach(s=>observer.observe(s));</script></body></html>
